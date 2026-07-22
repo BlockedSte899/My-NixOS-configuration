@@ -36,7 +36,25 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  swapDevices = [ ];
+  fileSystems."/mnt/C:" = {
+    device = "/dev/disk/by-uuid/FC54B81654B7D19E";
+    fsType = "ntfs";
+    options = [ "defaults" ];
+  };
+
+  fileSystems."/mnt/D:" = {
+    device = "/dev/disk/by-uuid/D8E0FAD5E0FAB938";
+    fsType = "ntfs";
+    options = [ "defaults" ];
+  };
+
+  fileSystems."/mnt/CachyOS" = {
+    device = "/dev/disk/by-uuid/c66e4c18-ad5f-420a-9398-b6b97537b2d2";
+    fsType = "ext4";
+    options = [ "defaults" ];
+  };
+
+  swapDevices = [ { device = "/swapfile"; size = 16384; } ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

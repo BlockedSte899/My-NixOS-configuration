@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+ffmpeg -i "${1%.*}" -c:v av1_nvenc -preset p7 -tune hq -rc vbr -cq 24 -b:v 0 -maxrate 20M -bufsize 40M -multipass fullres -pix_fmt p010le -c:a copy "${1%.*}_NVIDIA.mkv"
+echo ""
+echo "Done! Press Enter to close."
+read
