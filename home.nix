@@ -14,6 +14,7 @@ imports = [
   ./config/programs/alacritty/alacritty.nix
   ./config/programs/zen-browser/zen-browser.nix
   ./config/programs/fish/fish.nix
+  ./config/programs/mpv/mpv.nix
 ];
 
 gtk = {

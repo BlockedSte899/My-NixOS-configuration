@@ -26,6 +26,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = { nixpkgs, ... } @ inputs: 
@@ -49,6 +54,11 @@
         }
 
         inputs.stylix.nixosModules.stylix
+
+        inputs.agenix.nixosModules.default
+        {
+          environment.systemPackages = [ inputs.agenix.packages.x86_64-linux.default ];
+        }
 
       ];
     };

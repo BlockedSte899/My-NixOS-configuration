@@ -99,6 +99,8 @@
     pulseaudio
     mpvpaper
     xwayland-satellite
+    playerctl
+    brightnessctl
 
     fastfetch
     cmatrix
@@ -126,7 +128,6 @@
     jetbrains.idea-oss
     obs-studio
     qbittorrent
-    youtube-tui
     cinny-desktop
     immich
 
@@ -175,6 +176,7 @@
   # Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Everything related to Thunar File manager
   programs.xfconf.enable = true;
   services.udisks2.enable = true;
   services.gvfs.enable = true;
@@ -186,6 +188,17 @@
     thunar-volman
   ];
 
+  # Agenix
+  age.secrets = {
+    github-token = {
+      file = ./secrets/github-token.age;
+      mode = "0400";
+    };
+  };
+
+  # Secrets
+  nix.extraOptions = '' !include ${config.age.secrets.github-token.path} '';
+
   # List services that you want to enable:
 
   # Immich
@@ -196,7 +209,6 @@
     openFirewall = true;
     mediaLocation = "/var/lib/immich";
   };
-
 
   # Bluetooth
   hardware.bluetooth = {
@@ -215,7 +227,7 @@
   services.upower.enable = true;
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -240,8 +252,6 @@
       nvidiaBusId = "PCI:1:0:0";
     };
   };
-
-  nix.extraOptions = '' access-tokens = github.com=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 '';
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
