@@ -96,6 +96,7 @@
   environment.systemPackages = with pkgs; [
     alacritty
     git
+    jq
     pulseaudio
     mpvpaper
     xwayland-satellite
@@ -192,6 +193,10 @@
   age.secrets = {
     github-token = {
       file = ./secrets/github-token.age;
+      mode = "0400";
+    };
+    gemini-api-key = {
+      file = ./secrets/gemini-api-key.age;
       mode = "0400";
     };
   };

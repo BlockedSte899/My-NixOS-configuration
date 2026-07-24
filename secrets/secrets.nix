@@ -5,4 +5,5 @@ let
 in
 {
   "github-token.age".publicKeys = [ system nikita ];
+  "gemini-api-key.age".publicKeys = [ system nikita ];
 }
