@@ -199,6 +199,10 @@
       file = ./secrets/gemini-api-key.age;
       mode = "0400";
     };
+    zerotierone-BlockedSte899-network = {
+      file = ./secrets/zerotierone-BlockedSte899-network;
+      mode = "0400";
+    };
   };
 
   # Secrets
@@ -206,9 +210,14 @@
 
   # List services that you want to enable:
 
+  services.zerotierone = {
+    enable = true;
+    joinNetworks = [ "!include ${config.age.secrets.zerotierone-BlockedSte899-network.path}" ];
+  };
+
   # Immich
   services.immich = {
-    enable = true;
+    enable = false;
     host = "0.0.0.0";
     port = 2283;
     openFirewall = true;
@@ -240,7 +249,7 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # Nvidia proprietary drivers
+  # Nvidia proprietary driverszerotierone
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     modesetting.enable = true; # important for wayland
