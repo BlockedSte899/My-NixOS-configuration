@@ -199,10 +199,6 @@
       file = ./secrets/gemini-api-key.age;
       mode = "0400";
     };
-    zerotierone-BlockedSte899-network = {
-      file = ./secrets/zerotierone-BlockedSte899-network;
-      mode = "0400";
-    };
   };
 
   # Secrets
@@ -212,7 +208,8 @@
 
   services.zerotierone = {
     enable = true;
-    joinNetworks = [ "!include ${config.age.secrets.zerotierone-BlockedSte899-network.path}" ];
+    port = 9993;
+    joinNetworks = [ "8850338390106a82" ];
   };
 
   # Immich
@@ -247,7 +244,7 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  networking.firewall.enable = false;
 
   # Nvidia proprietary driverszerotierone
   services.xserver.videoDrivers = [ "nvidia" ];
