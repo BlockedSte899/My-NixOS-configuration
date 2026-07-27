@@ -118,7 +118,6 @@
 
     telegram-desktop
     firefox
-    vscodium
     mousepad
     opencode
     obsidian
@@ -130,8 +129,8 @@
     jetbrains.idea-oss
     obs-studio
     qbittorrent
-    cinny-desktop
     immich
+    qdirstat
 
     #sddm-astronaut
     #(pkgs.sddm-astronaut.override { embeddedTheme = "hyprland_kath"; })
@@ -247,7 +246,7 @@
   # Or disable the firewall altogether.
   networking.firewall.enable = false;
 
-  # Nvidia proprietary driverszerotierone
+  # Nvidia proprietary drivers
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     modesetting.enable = true; # important for wayland
@@ -263,6 +262,17 @@
       intelBusId = "PCI:0:2:0";
       nvidiaBusId = "PCI:1:0:0";
     };
+  };
+
+  # Intel graphics driver
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      libva-vdpau-driver
+      libvdpau-va-gl
+      vpl-gpu-rt
+    ];
   };
 
   # This value determines the NixOS release from which the default
