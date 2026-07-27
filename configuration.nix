@@ -114,6 +114,7 @@
     gowall
     yazi
     img
+    vim
 
     telegram-desktop
     firefox
