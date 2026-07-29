@@ -130,7 +130,8 @@
     obs-studio
     qbittorrent
     immich
-    qdirstat
+    steam
+    # qdirstat
 
     #sddm-astronaut
     #(pkgs.sddm-astronaut.override { embeddedTheme = "hyprland_kath"; })
@@ -233,6 +234,9 @@
     };
   };
 
+  # Better controllers support via Steam hardware package
+  hardware.steam-hardware.enable = true;
+
   # Power services
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
@@ -267,6 +271,7 @@
   # Intel graphics driver
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;
     extraPackages = with pkgs; [
       intel-media-driver
       libva-vdpau-driver

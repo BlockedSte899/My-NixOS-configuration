@@ -15,6 +15,7 @@ imports = [
   ./config/programs/zen-browser/zen-browser.nix
   ./config/programs/fish/fish.nix
   ./config/programs/mpv/mpv.nix
+  ./config/programs/vim/vim.nix
 ];
 
 gtk = {

@@ -160,11 +160,6 @@ widget_order = [ "lockscreen-login-box@DP-1", "lockscreen-login-box@eDP-1", "loc
 filter_order = [ "filter" ]
 layer = "overlay"
 
-[plugin_settings."avivbintangaringga/nix-monitor"]
-branch = "nixos-26.05"
-clean_command = "nix-collect-garbage -d"
-update_command = ""
-
 [plugin_settings."noctalia/mpvpaper"]
 video_directory = "~/nixos/Wallpapers"
 
@@ -217,7 +212,7 @@ transition_on_startup = true
     path = "/home/nikita/nixos/Wallpapers/kanagawa-paper/brown_city_planet.png"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/nikita/nixos/Wallpapers/nullscapes.upscaled.png"
+    path = "/home/nikita/nixos/Wallpapers/kanagawa-paper/brown_city_planet.png"
 
     [wallpaper.monitors.eDP-1]
     path = "/home/nikita/nixos/Wallpapers/kanagawa-paper/brown_city_planet.png"
