@@ -2,7 +2,7 @@
 
 home.username = "nikita";
 home.homeDirectory = "/home/nikita";
-home.stateVersion = "25.05";
+home.stateVersion = "26.05";
 
 xdg.configFile."niri/config.kdl".source = ./config/programs/niri/config.kdl;   # niri
 
