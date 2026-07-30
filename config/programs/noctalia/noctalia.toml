@@ -29,16 +29,6 @@ widget_spacing = 15
 [battery]
 warning_threshold = 20
 
-[calendar]
-enabled = true
-
-    [calendar.account.nikitaparshutkin26]
-    name = "nixos"
-    provider = "custom"
-    server_url = "https://ivo.lv.tab.digital/remote.php/dav"
-    type = "caldav"
-    username = "nikitaparshutkin26@gmail.com"
-
 [control_center]
 sidebar = "full"
 width = 750

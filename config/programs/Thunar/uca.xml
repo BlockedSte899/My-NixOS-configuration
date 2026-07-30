@@ -17,7 +17,7 @@
 	<name>Compress</name>
 	<submenu></submenu>
 	<unique-id>1778678766426762-1</unique-id>
-	<command>alacritty -e sh -c &quot;~/nixos/config/programs/Thunar/scripts/compress&quot; &quot;%f&quot;</command>
+	<command>alacritty -e ~/nixos/config/programs/Thunar/scripts/compress %f</command>
 	<description>Compresses video using AV1 codec </description>
 	<range>*</range>
 	<patterns>*</patterns>

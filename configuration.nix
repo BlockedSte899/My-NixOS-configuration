@@ -130,7 +130,6 @@
     obs-studio
     qbittorrent
     immich
-    steam
     # qdirstat
 
     #sddm-astronaut
@@ -207,6 +206,12 @@
 
   # List services that you want to enable:
 
+  # Required for better controllers (dualshock 4) support
+  programs.steam = {
+    enable = true;
+    protontricks.enable = true;
+  };
+
   services.zerotierone = {
     enable = true;
     port = 9993;
@@ -233,9 +238,6 @@
       };
     };
   };
-
-  # Better controllers support via Steam hardware package
-  hardware.steam-hardware.enable = true;
 
   # Power services
   services.power-profiles-daemon.enable = true;
