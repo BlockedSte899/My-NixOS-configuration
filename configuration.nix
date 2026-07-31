@@ -126,7 +126,7 @@
     prismlauncher
     localsend
     gimp
-    jetbrains.idea-oss
+    jetbrains.idea
     obs-studio
     qbittorrent
     immich
