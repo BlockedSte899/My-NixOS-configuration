@@ -28,12 +28,6 @@
   # Fish shell
   programs.fish = {
     enable = true;
-
-    shellAliases = {
-      nixrebuild = "cd ~/nixos && sudo nixos-rebuild switch --flake .";
-      nixupdate = "cd ~/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake .";
-    };
-
     interactiveShellInit = '' set -g fish_greeting "" '';
   };
 

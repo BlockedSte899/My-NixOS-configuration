@@ -149,7 +149,7 @@ filter_order = [ "filter" ]
 layer = "overlay"
 
 [plugin_settings."noctalia/mpvpaper"]
-video_directory = "~/nixos/Wallpapers"
+video_directory = "~/nixos-config/Wallpapers"
 
 [plugin_settings."radimous/prismlauncher-instances"]
 prism_path = "~/.local/share/PrismLauncher"
@@ -189,21 +189,21 @@ wallpaper_scheme = "m3-content"
     builtin_ids = []
 
 [wallpaper]
-directory = "~/nixos/Wallpapers"
+directory = "~/nixos-config/Wallpapers"
 transition = [ "disc", "fade", "honeycomb", "stripes", "wipe", "zoom" ]
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/nikita/nixos/Wallpapers/kanagawa-paper/brown_city_planet.png"
+    path = "/home/nikita/nixos-config/Wallpapers/kanagawa-paper/brown_city_planet.png"
 
     [wallpaper.last]
-    path = "/home/nikita/nixos/Wallpapers/kanagawa-paper/brown_city_planet.png"
+    path = "/home/nikita/nixos-config/Wallpapers/kanagawa-paper/brown_city_planet.png"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/nikita/nixos/Wallpapers/kanagawa-paper/brown_city_planet.png"
+    path = "/home/nikita/nixos-config/Wallpapers/kanagawa-paper/brown_city_planet.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/nikita/nixos/Wallpapers/kanagawa-paper/brown_city_planet.png"
+    path = "/home/nikita/nixos-config/Wallpapers/kanagawa-paper/brown_city_planet.png"
 
 [widget.battery]
 color = "secondary"
