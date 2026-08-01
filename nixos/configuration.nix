@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, vars, ... }:
 
 {
   imports =
@@ -131,7 +131,7 @@
     (pkgs.sddm-astronaut.override {
       embeddedTheme = "astronaut";
       themeConfig = {
-        Background = "${./Wallpapers/kanagawa-paper/brown_city_planet.png}";
+        Background = "${vars.configPath}/Wallpapers/kanagawa-paper/brown_city_planet.png";
         Font = "monocraft";
         FullBlur = true;
         HideVirtualKeyboard = true;
@@ -186,11 +186,11 @@
   # Agenix
   age.secrets = {
     github-token = {
-      file = ./secrets/github-token.age;
+      file = "${vars.configPath}/secrets/github-token.age";
       mode = "0400";
     };
     gemini-api-key = {
-      file = ./secrets/gemini-api-key.age;
+      file = "${vars.configPath}/secrets/gemini-api-key.age";
       mode = "0400";
     };
   };
