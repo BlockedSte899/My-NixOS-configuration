@@ -40,7 +40,7 @@
     system = "x86_64-linux";
     hostname = "nixos";
     stateVersion = "26.05";
-    configPath = ~/nixos-config;
+    configPath = "/home/${vars.username}/nixos-config";
   };
   in
   {
