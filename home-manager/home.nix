@@ -1,24 +1,18 @@
-{ config, pkgs, inputs, vars, ... }: {
+{ config, pkgs, inputs, vars, ... }:
 
-home.username = vars.username;
-home.homeDirectory = "/home/${vars.username}";
-home.stateVersion = vars.stateVersion;
+{
 
-xdg.configFile."niri/config.kdl".source = ./modules/niri/config.kdl;   # niri
+  home.username = vars.username;
+  home.homeDirectory = "/home/${vars.username}";
+  home.stateVersion = vars.stateVersion;
 
-xdg.configFile."Thunar/accels.scm".source = ./modules/Thunar/accels.scm;   # Thunar
-xdg.configFile."Thunar/uca.xml".source = ./modules/Thunar/uca.xml;   # Thunar
+  xdg.configFile."niri/config.kdl".source = ./modules/niri/config.kdl;   # niri
 
-imports = [
-  ./modules/bundle.nix
-];
+  xdg.configFile."Thunar/accels.scm".source = ./modules/Thunar/accels.scm;   # Thunar
+  xdg.configFile."Thunar/uca.xml".source = ./modules/Thunar/uca.xml;   # Thunar
 
-  gtk = {
-    enable = true;
-    iconTheme = {
-      package = pkgs.papirus-icon-theme;
-      name = "Papirus";
-    };
-  };
+  imports = [
+    ./modules/bundle.nix
+  ];
 
 }

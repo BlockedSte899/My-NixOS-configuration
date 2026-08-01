@@ -7,5 +7,6 @@
     ./mpv/mpv.nix
     ./vim/vim.nix
     ./stylix/stylix.nix
+    ./gtk/gtk.nix
   ];
 }
