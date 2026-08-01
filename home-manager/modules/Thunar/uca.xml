@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1777534510789379-1</unique-id>
+	<command>alacritty --working-directory %f</command>
+	<description>Example for a custom action</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>ffmpeg</icon>
+	<name>Compress</name>
+	<submenu></submenu>
+	<unique-id>1778678766426762-1</unique-id>
+	<command>alacritty -e ~/nixos-config/home-manager/modules/Thunar/scripts/compress %f</command>
+	<description>Compresses video using AV1 codec </description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>keepassxc-unlocked</icon>
+	<name>Open as Root</name>
+	<submenu></submenu>
+	<unique-id>1780078265438662-1</unique-id>
+	<command>thunar admin://%f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>

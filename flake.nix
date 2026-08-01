@@ -33,10 +33,19 @@
 
   };
 
-  outputs = { nixpkgs, ... } @ inputs: 
+  outputs = { nixpkgs, ... } @ inputs:
+  let
+  vars = {
+    username = "nikita";
+    system = "x86_64-linux";
+    hostname = "nixos";
+    stateVersion = "26.05";
+    configPath = ~/nixos-config;
+  };
+  in
   {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
+    nixosConfigurations.${vars.hostname} = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; inherit vars; };
 
       modules = [
         ./configuration.nix
@@ -45,8 +54,8 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.nikita = ./home.nix;
-          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.users.${vars.username} = ./home-manager/home.nix;
+          home-manager.extraSpecialArgs = { inherit inputs; inherit vars; };
 
           home-manager.sharedModules = [
           #  inputs.zen-browser.homeModules.default
@@ -57,7 +66,7 @@
 
         inputs.agenix.nixosModules.default
         {
-          environment.systemPackages = [ inputs.agenix.packages.x86_64-linux.default ];
+          environment.systemPackages = [ inputs.agenix.packages.${vars.system}.default ];
         }
 
       ];
