@@ -8,19 +8,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules/bundle.nix
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  # SDDM login manager
-  services.displayManager.sddm = {
-    enable = true;
-    theme = "sddm-astronaut-theme";
-    extraPackages = [ pkgs.sddm-astronaut ];
-  };
-  services.xserver.enable = true;
 
   # Niri wayland compositor
   programs.niri.enable = true;
@@ -125,18 +118,6 @@
     qbittorrent
     immich
     # qdirstat
-
-    #sddm-astronaut
-    #(pkgs.sddm-astronaut.override { embeddedTheme = "hyprland_kath"; })
-    (pkgs.sddm-astronaut.override {
-      embeddedTheme = "astronaut";
-      themeConfig = {
-        Background = "${vars.configPath}/Wallpapers/kanagawa-paper/brown_city_planet.png";
-        Font = "monocraft";
-        FullBlur = true;
-        HideVirtualKeyboard = true;
-      };
-    })
   ];
 
   fonts.packages = with pkgs; [
@@ -199,6 +180,9 @@
   nix.extraOptions = '' !include ${config.age.secrets.github-token.path} '';
 
   # List services that you want to enable:
+
+  # Disable network check daemon on start
+  systemd.services.NetworkManager-wait-online.enable = false;
 
   # Required for better controllers (dualshock 4) support
   programs.steam = {
