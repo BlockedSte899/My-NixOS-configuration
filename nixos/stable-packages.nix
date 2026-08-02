@@ -17,6 +17,7 @@
     fastfetch
     cmatrix
     btop
+    tree
     ffmpeg
     pkgs.thunar
     xarchiver
