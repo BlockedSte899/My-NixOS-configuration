@@ -23,6 +23,12 @@ in
     wayland.compositor = "kwin";
     theme = "sddm-astronaut-theme";
 
+    extraPackages = [
+      sddm-astronaut-themed
+      pkgs.kdePackages.qtmultimedia
+      pkgs.kdePackages.qtsvg
+    ];
+
     settings = {
       Theme = {
         CursorTheme = "Qogir";
