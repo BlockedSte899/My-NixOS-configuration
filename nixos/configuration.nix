@@ -6,9 +6,11 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
       ./modules/bundle.nix
+      ./stable-packages.nix
+      ./unstable-packages.nix
     ];
 
   # Bootloader.
@@ -74,51 +76,6 @@
     packages = with pkgs; [];
     shell = pkgs.fish;
   };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    alacritty
-    git
-    jq
-    pulseaudio
-    mpvpaper
-    xwayland-satellite
-    playerctl
-    brightnessctl
-
-    fastfetch
-    cmatrix
-    btop
-    ffmpeg
-    pkgs.thunar
-    xarchiver
-    lxqt.lxqt-policykit
-    mpv
-    gowall
-    yazi
-    img
-    vim
-
-    telegram-desktop
-    firefox
-    mousepad
-    opencode
-    obsidian
-    pavucontrol
-    bottles
-    prismlauncher
-    localsend
-    gimp
-    jetbrains.idea
-    obs-studio
-    qbittorrent
-    immich
-    # qdirstat
-  ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono

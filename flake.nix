@@ -42,10 +42,16 @@
     stateVersion = "26.05";
     configPath = "/home/${vars.username}/nixos-config";
   };
+
+  pkgs-unstable = import inputs.nixpkgs-unstable {
+    system = vars.system;
+    config.allowUnfree = true;
+  };  
+
   in
   {
     nixosConfigurations.${vars.hostname} = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; inherit vars; };
+      specialArgs = { inherit inputs; inherit vars; inherit pkgs-unstable; };
 
       modules = [
         ./nixos/configuration.nix
@@ -55,7 +61,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.${vars.username} = ./home-manager/home.nix;
-          home-manager.extraSpecialArgs = { inherit inputs; inherit vars; };
+          home-manager.extraSpecialArgs = { inherit inputs; inherit vars; inherit pkgs-unstable; };
 
           home-manager.sharedModules = [
           #  inputs.zen-browser.homeModules.default
