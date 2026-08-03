@@ -8,5 +8,6 @@
     ./vim/vim.nix
     ./stylix/stylix.nix
     ./gtk/gtk.nix
+    ./ludusavi/ludusavi.nix
   ];
 }

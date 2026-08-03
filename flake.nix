@@ -64,11 +64,10 @@
           home-manager.extraSpecialArgs = { inherit inputs; inherit vars; inherit pkgs-unstable; };
 
           home-manager.sharedModules = [
-          #  inputs.zen-browser.homeModules.default
+            # inputs.zen-browser.homeModules.default
+            inputs.stylix.homeModules.stylix
           ];
         }
-
-        inputs.stylix.nixosModules.stylix
 
         inputs.agenix.nixosModules.default
         {
