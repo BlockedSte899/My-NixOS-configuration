@@ -32,6 +32,7 @@
     mousepad
     gimp
     jetbrains.idea
+    bottles
     # qdirstat
   ];
 }

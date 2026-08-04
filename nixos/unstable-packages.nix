@@ -5,7 +5,6 @@
     telegram-desktop
     firefox
     obsidian
-    bottles
     prismlauncher
     localsend
     obs-studio
