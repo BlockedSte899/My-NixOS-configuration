@@ -4,7 +4,7 @@ let
   sddm-astronaut-themed = pkgs.sddm-astronaut.override {
     embeddedTheme = "astronaut";
     themeConfig = {
-      Background = "${../../../Wallpapers/kanagawa-paper/brown_city_planet.png}";
+      Background = "${../../Wallpapers/kanagawa-paper/brown_city_planet.png}";
       Font = "monocraft";
       FullBlur = true;
       HideVirtualKeyboard = true;

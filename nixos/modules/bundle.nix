@@ -2,6 +2,6 @@
 
 {
   imports = [
-    ./sddm/sddm.nix
+    ./sddm.nix
   ];
 }

@@ -1,13 +1,12 @@
 {
   imports = [
     ./noctalia/noctalia.nix
-    ./alacritty/alacritty.nix
-    ./zen-browser/zen-browser.nix
-    ./fish/fish.nix
-    ./mpv/mpv.nix
-    ./vim/vim.nix
-    ./stylix/stylix.nix
-    ./gtk/gtk.nix
-    ./ludusavi/ludusavi.nix
+    ./alacritty.nix
+    ./zen-browser.nix
+    ./fish.nix
+    ./mpv.nix
+    ./vim.nix
+    ./stylix.nix
+    ./gtk.nix
   ];
 }
