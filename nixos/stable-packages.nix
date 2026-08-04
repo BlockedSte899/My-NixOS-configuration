@@ -33,6 +33,11 @@
     gimp
     jetbrains.idea
     bottles
+    obsidian
+    obs-studio
+    localsend
+    prismlauncher
+    qbittorrent
     # qdirstat
   ];
 }
