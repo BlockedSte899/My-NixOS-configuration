@@ -5,8 +5,8 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    alacritty
     git
+    lazygit
     jq
     pulseaudio
     mpvpaper
@@ -17,7 +17,9 @@
     fastfetch
     cmatrix
     btop
-    tree
+    bat
+    lsd
+    fd
     ffmpeg
     pkgs.thunar
     xarchiver
@@ -25,7 +27,7 @@
     mpv
     gowall
     yazi
-    img
+    viu
     vim
 
     opencode

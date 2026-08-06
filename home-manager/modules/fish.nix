@@ -42,5 +42,11 @@
         '';
       };
     };
+    shellAliases = {
+      ls = "lsd";
+      lt = "ls --tree";
+      tree = "ls --tree";
+      cat = "bat -p";
+    };
   };
 }
