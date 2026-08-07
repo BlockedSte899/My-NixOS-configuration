@@ -1,6 +1,8 @@
 {
   imports = [
     ./noctalia/noctalia.nix
+    ./niri/niri.nix
+    ./Thunar/Thunar.nix
     ./zen-browser.nix
     ./fish.nix
     ./mpv.nix
