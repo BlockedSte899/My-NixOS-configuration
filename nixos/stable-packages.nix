@@ -29,6 +29,7 @@
     yazi
     viu
     vim
+    neovim
 
     opencode
     mousepad
@@ -40,6 +41,7 @@
     localsend
     prismlauncher
     qbittorrent
+    ayugram-desktop
     # qdirstat
   ];
 }
