@@ -6,4 +6,5 @@ in
 {
   "github-token.age".publicKeys = [ system nikita ];
   "gemini-api-key.age".publicKeys = [ system nikita ];
+  "curseforge-api-key.age".publicKeys = [ system nikita ];
 }

@@ -11,5 +11,6 @@
     ./gtk.nix
     ./yazi.nix
     ./kitty.nix
+    ./prismlauncher.nix
   ];
 }

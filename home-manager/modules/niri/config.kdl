@@ -337,6 +337,7 @@ window-rule {
     clip-to-geometry false
 }
 
+// Column width
 window-rule {
     match title="Firefox"
     match title="Obsidian"
@@ -344,6 +345,14 @@ window-rule {
     default-column-width { proportion 0.75; }
 }
 
+// Opacity
+window-rule {
+	match app-id="org.prismlauncher.PrismLauncher"
+
+	opacity 0.95
+}
+
+// Custom rules
 window-rule {
     match app-id="jetbrains-idea"
 

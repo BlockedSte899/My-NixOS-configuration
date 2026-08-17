@@ -11,6 +11,10 @@
       file = "${vars.configPath}/secrets/gemini-api-key.age";
       mode = "0400";
     };
+    curseforge-api-key = {
+      file = "${vars.configPath}/secrets/curseforge-api-key.age";
+      mode = "0400";
+    };
   };
 
   # Github authentication token

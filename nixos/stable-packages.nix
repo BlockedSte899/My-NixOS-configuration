@@ -17,12 +17,14 @@
     fastfetch
     cmatrix
     btop
+    nvtopPackages.full
     bat
     lsd
     fd
     ffmpeg
     pkgs.thunar
     xarchiver
+    unrar
     lxqt.lxqt-policykit
     mpv
     gowall
@@ -39,7 +41,6 @@
     obsidian
     obs-studio
     localsend
-    prismlauncher
     qbittorrent
     ayugram-desktop
     # qdirstat
