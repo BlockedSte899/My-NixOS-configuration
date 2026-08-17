@@ -339,43 +339,48 @@ window-rule {
 
 // Column width
 window-rule {
-    match title="Firefox"
-    match title="Obsidian"
+	match app-id="org.qbittorrent.qBittorrent"
+        default-column-width { proportion 0.6; }
+}
 
+window-rule {
+    match title="Firefox"
+    match app-id="md.Obsidian"
+    match app-id="zen-beta"
     default-column-width { proportion 0.75; }
 }
 
-// Opacity
+window-rule {
+	match title="jetbrains-idea"
+	default-column-width { proportion 0.85; }
+}
+
+// Opacity and blur
 window-rule {
 	match app-id="org.prismlauncher.PrismLauncher"
+        match app-id="com.usebottles.bottles"
+        match app-id="thunar"
+	match app-id="md.Obsidian"
+	match app-id="org.telegram.desktop"
+	match app-id="com.obsproject.Studio"
+	match app-id="org.qbittorrent.qBittorrent"
+	match app-id="localsend_app"
+        match app-id="zen-beta"
 
-	opacity 0.95
+	opacity 0.84
+	draw-border-with-background false
+	background-effect {
+		blur true
+        	noise 0.05
+		saturation 3
+	}
 }
 
-// Custom rules
-window-rule {
-    match app-id="jetbrains-idea"
-
-    default-column-width { proportion 0.85; }
-}
-
+// Misc rules
 window-rule {
     match app-id="thunar"
     exclude title="Thunar"
     open-floating true
-}
-
-window-rule {
-  match app-id="zen-beta"
-  opacity 0.84
-  draw-border-with-background false
-  default-column-width { proportion 0.8; }
-
-  background-effect {
-    blur true
-    noise 0.05
-    saturation 3
-  }
 }
 
 
