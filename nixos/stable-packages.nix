@@ -42,7 +42,7 @@
     obs-studio
     localsend
     qbittorrent
-    ayugram-desktop
+    youtube-tui
     # qdirstat
   ];
 }

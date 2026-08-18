@@ -3,7 +3,7 @@
 {
   stylix = {
     enable = true;
-    opacity.terminal = 0.95;
+    #opacity.terminal = 0.84; # I dont't use it bc it's declared in niri/config.kdl
 
     base16Scheme = {
       scheme = "Custom Dark (generated)";

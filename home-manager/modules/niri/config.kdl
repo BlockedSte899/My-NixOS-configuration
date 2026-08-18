@@ -359,13 +359,14 @@ window-rule {
 window-rule {
 	match app-id="org.prismlauncher.PrismLauncher"
         match app-id="com.usebottles.bottles"
-        match app-id="thunar"
+        match app-id="Thunar"
 	match app-id="md.Obsidian"
 	match app-id="org.telegram.desktop"
 	match app-id="com.obsproject.Studio"
 	match app-id="org.qbittorrent.qBittorrent"
 	match app-id="localsend_app"
         match app-id="zen-beta"
+	match app-id="kitty"
 
 	opacity 0.84
 	draw-border-with-background false
