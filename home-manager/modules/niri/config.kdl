@@ -340,6 +340,7 @@ window-rule {
 // Column width
 window-rule {
 	match app-id="org.qbittorrent.qBittorrent"
+	match app-id="Ferdium"
         default-column-width { proportion 0.6; }
 }
 
@@ -366,6 +367,7 @@ window-rule {
 	match app-id="org.qbittorrent.qBittorrent"
 	match app-id="localsend_app"
         match app-id="zen-beta"
+	match app-id="Ferdium"
 	match app-id="kitty"
 
 	opacity 0.84
@@ -380,6 +382,7 @@ window-rule {
 // Misc rules
 window-rule {
     match app-id="thunar"
+    match title="Authentication Required"
     exclude title="Thunar"
     open-floating true
 }

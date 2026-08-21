@@ -3,6 +3,8 @@
 {
   stylix = {
     enable = true;
+
+    polarity = "dark"; # Dark theme by default
     #opacity.terminal = 0.84; # I dont't use it bc it's declared in niri/config.kdl
 
     base16Scheme = {

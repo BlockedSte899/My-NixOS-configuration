@@ -12,5 +12,6 @@
     ./yazi.nix
     ./kitty.nix
     ./prismlauncher.nix
+    ./xmcl.nix
   ];
 }

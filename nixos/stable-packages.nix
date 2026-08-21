@@ -31,10 +31,8 @@
     yazi
     viu
     vim
-    neovim
 
     opencode
-    mousepad
     gimp
     jetbrains.idea
     bottles
@@ -43,6 +41,9 @@
     localsend
     qbittorrent
     youtube-tui
+    ferdium
+    kdePackages.okular
+    kdePackages.kate
     # qdirstat
   ];
 }
