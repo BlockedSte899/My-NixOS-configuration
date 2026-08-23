@@ -33,6 +33,7 @@
     vim
 
     opencode
+    lmstudio
     gimp
     jetbrains.idea
     bottles
