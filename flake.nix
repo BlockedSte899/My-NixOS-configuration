@@ -38,7 +38,7 @@
 
   };
 
-  outputs = { nixpkgs, ... } @ inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, ... } @ inputs:
   let
   vars = {
     username = "nikita";
@@ -48,7 +48,12 @@
     configPath = "/home/${vars.username}/nixos-config";
   };
 
-  pkgs-unstable = import inputs.nixpkgs-unstable {
+  pkgs = import nixpkgs {
+    system = vars.system;
+    config.allowUnfree = true;
+  };  
+
+  pkgs-unstable = import nixpkgs-unstable {
     system = vars.system;
     config.allowUnfree = true;
   };  
@@ -56,9 +61,13 @@
   in
   {
     nixosConfigurations.${vars.hostname} = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; inherit vars; inherit pkgs-unstable; };
+      specialArgs = { inherit inputs vars pkgs-unstable; };
 
       modules = [
+        {
+          nixpkgs.pkgs = pkgs;
+        }
+
         ./nixos/configuration.nix
 
         inputs.home-manager.nixosModules.default
