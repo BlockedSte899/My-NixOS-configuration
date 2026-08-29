@@ -19,31 +19,9 @@
     bat
     lsd
     fd
-    ffmpeg
-    pkgs.thunar
-    xarchiver
-    unrar
-    lxqt.lxqt-policykit
-    mpv
-    gowall
     yazi
     viu
     vim
-
-    opencode
-    lmstudio
-    gimp
-    jetbrains.idea
-    bottles
-    obsidian
-    obs-studio
-    localsend
-    qbittorrent
-    youtube-tui
-    ferdium
-    kdePackages.okular
-    kdePackages.kate
-    # qdirstat
   ];
 }
 

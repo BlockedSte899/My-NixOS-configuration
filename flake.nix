@@ -35,7 +35,6 @@
       url = "github:x45iq/xmcl-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
   outputs = { nixpkgs, nixpkgs-unstable, ... } @ inputs:

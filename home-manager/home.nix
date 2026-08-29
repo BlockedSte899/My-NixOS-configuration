@@ -8,6 +8,8 @@
 
   imports = [
     ./modules/bundle.nix
+    ./stable-packages.nix
+    ./unstable-packages.nix
   ];
 
 }
