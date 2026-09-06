@@ -13,5 +13,6 @@
     ./kitty.nix
     ./prismlauncher.nix
     ./xmcl.nix
+    ./rmcp.nix
   ];
 }
