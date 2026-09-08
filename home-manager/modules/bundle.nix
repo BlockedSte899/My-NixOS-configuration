@@ -3,7 +3,7 @@
     ./noctalia/noctalia.nix
     ./niri/niri.nix
     ./Thunar/Thunar.nix
-    ./rmcp/rmcp.nix
+    ./rmcp/rmpc.nix
     ./zen-browser.nix
     ./fish.nix
     ./mpv.nix
