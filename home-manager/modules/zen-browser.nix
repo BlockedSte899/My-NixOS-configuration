@@ -18,34 +18,11 @@ programs.zen-browser = {
     enable = true;
     setAsDefaultBrowser = true;
     profiles.default = {
-      # Delete spaces not declared here
-      spacesForce = true;
-
       settings = {
         # dark UI
         "zen.view.window.scheme" = 0;
         # dark web content
         "layout.css.prefers-color-scheme.content-override" = 0;
-      };
-
-      spaces = {
-        "Default" = {
-          id = "fdd2cada-f773-41cb-9e54-283ab64d9ec1";
-          position = 2000;
-          icon = "-";
-          theme = {
-            type = "gradient";
-            colors = [
-              {
-                red = toRed config.lib.stylix.colors.base00;
-                green = toGreen config.lib.stylix.colors.base00;
-                blue = toBlue config.lib.stylix.colors.base00;
-                algorithm = "floating";
-              }
-            ];
-            opacity = 0.95;
-          };
-        };
       };
 
       mods = [

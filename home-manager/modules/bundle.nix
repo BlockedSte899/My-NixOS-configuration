@@ -3,6 +3,7 @@
     ./noctalia/noctalia.nix
     ./niri/niri.nix
     ./Thunar/Thunar.nix
+    ./rmcp/rmcp.nix
     ./zen-browser.nix
     ./fish.nix
     ./mpv.nix
@@ -13,6 +14,5 @@
     ./kitty.nix
     ./prismlauncher.nix
     ./xmcl.nix
-    ./rmcp.nix
   ];
 }
