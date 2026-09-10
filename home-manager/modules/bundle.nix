@@ -14,5 +14,6 @@
     ./kitty.nix
     ./prismlauncher.nix
     ./xmcl.nix
+    ./opencode.nix
   ];
 }

@@ -18,5 +18,6 @@
     ./Thunar.nix
     ./steam.nix
     ./fonts.nix
+    ./printing.nix
   ];
 }

@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     ffmpeg
     yt-dlp
-    ytmdesktop
     pkgs.thunar
     xarchiver
     unrar

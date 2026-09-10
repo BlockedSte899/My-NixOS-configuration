@@ -7,7 +7,7 @@
     config = ''
       (
         enable_config_hot_reload: true,
-        theme: "custom-theme",
+        theme: Some("custom-theme"),
       )
     '';
   };

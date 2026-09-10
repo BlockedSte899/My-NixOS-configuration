@@ -4,7 +4,6 @@
         panes: [
           (
               size: "4",
-              borders: "ALL",
               pane: Pane(Header),
           ),
           (
@@ -13,12 +12,10 @@
           ),
           (
               size: "100%",
-              borders: "ALL",
               pane: Pane(TabContent),
           ),
           (
               size: "3",
-              borders: "ALL",
               pane: Pane(ProgressBar),
          ),
       ],
