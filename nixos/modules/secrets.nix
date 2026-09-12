@@ -15,6 +15,10 @@
       file = "${vars.configPath}/secrets/curseforge-api-key.age";
       mode = "0400";
     };
+    opencode-failover = {
+      file = "${vars.configPath}/secrets/opencode-failover.age";
+      mode = "0400";
+    };
   };
 
   # Github authentication token
