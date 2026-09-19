@@ -3,7 +3,6 @@
 {
   home.packages = with pkgs; [
     ffmpeg
-    yt-dlp
     pkgs.thunar
     xarchiver
     unrar

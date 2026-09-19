@@ -35,6 +35,11 @@
       url = "github:x45iq/xmcl-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    ytm-player = {
+      url = "github:peternaame-boop/ytm-player";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   outputs = { nixpkgs, nixpkgs-unstable, ... } @ inputs:
@@ -55,6 +60,7 @@
   pkgs-unstable = import nixpkgs-unstable {
     system = vars.system;
     config.allowUnfree = true;
+    overlays = [ inputs.ytm-player.overlays.default ];
   };  
 
   in

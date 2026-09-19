@@ -6,9 +6,7 @@
     settings = {
       "$schema" = "https://opencode.ai/config.json";
 
-      plugin = [
-        "opencode-failover"
-      ];
+      plugin = [];
     };
   };
 }
