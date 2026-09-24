@@ -6,22 +6,22 @@
     pkgs.thunar
     xarchiver
     unrar
-    lxqt.lxqt-policykit
+    #lxqt.lxqt-policykit
     mpv
     mpc
     gowall
 
     gimp
-    opencode
-    opencode-desktop
     lmstudio
+    cherry-studio
     onlyoffice-desktopeditors
     bottles
     obsidian
-    obs-studio
+    audacity
     localsend
     qbittorrent
     ferdium
+    teams-for-linux
     kdePackages.okular
     kdePackages.kate
     # qdirstat

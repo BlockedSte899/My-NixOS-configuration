@@ -55,6 +55,12 @@
   pkgs = import nixpkgs {
     system = vars.system;
     config.allowUnfree = true;
+    config.permittedInsecurePackages = [
+      # required for opencode-desktop and cherry-studio
+      "electron-41.9.1"
+      "electron-40.10.5"
+      "pnpm-10.29.2"
+    ];
   };  
 
   pkgs-unstable = import nixpkgs-unstable {

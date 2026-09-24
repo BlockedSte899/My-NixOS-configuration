@@ -6,5 +6,6 @@
     firefox
     ytm-player
     yt-dlp
+    #cherry-studio
   ];
 }
