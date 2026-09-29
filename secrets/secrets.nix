@@ -7,5 +7,6 @@ in
   "github-token.age".publicKeys = [ system nikita ];
   "gemini-api-key.age".publicKeys = [ system nikita ];
   "curseforge-api-key.age".publicKeys = [ system nikita ];
-  "opencode-failover.age".publicKeys = [ system nikita ];
+  "dahl-api-key.age".publicKeys = [ system nikita ];
+  "exa-api-key.age".publicKeys = [ system nikita ];
 }

@@ -15,8 +15,14 @@
       file = "${vars.configPath}/secrets/curseforge-api-key.age";
       mode = "0400";
     };
-    opencode-failover = {
-      file = "${vars.configPath}/secrets/opencode-failover.age";
+    dahl-api-key = {
+      file = "${vars.configPath}/secrets/dahl-api-key.age";
+      owner = "nikita";
+      mode = "0400";
+    };
+    exa-api-key = {
+      file = "${vars.configPath}/secrets/exa-api-key.age";
+      owner = "nikita";
       mode = "0400";
     };
   };
