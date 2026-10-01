@@ -40,6 +40,11 @@
       url = "github:peternaame-boop/ytm-player";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+
+    mc-server-manager = {
+      url = "github:BlockedSte899/mc-server-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, nixpkgs-unstable, ... } @ inputs:
@@ -96,7 +101,10 @@
 
         inputs.agenix.nixosModules.default
         {
-          environment.systemPackages = [ inputs.agenix.packages.${vars.system}.default ];
+          environment.systemPackages = [ 
+            inputs.agenix.packages.${vars.system}.default
+            inputs.mc-server-manager.packages.${vars.system}.default
+          ];
         }
 
       ];

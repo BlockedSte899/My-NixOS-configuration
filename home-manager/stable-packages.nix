@@ -24,6 +24,8 @@
     teams-for-linux
     kdePackages.okular
     kdePackages.kate
+    telegram-desktop
+    ayugram-desktop
     # qdirstat
   ];
 }
