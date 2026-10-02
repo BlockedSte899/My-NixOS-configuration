@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    mediainfo
+    ffmpegthumbnailer
+  ];
+
   programs.yazi = {
     enable = true;
     settings = {
