@@ -1,7 +1,7 @@
 { pkgs-unstable, osConfig, ... }:
 
 {
-  home.packages = with pkgs-unstable; [ mcp-nixos ]; 
+  home.packages = with pkgs-unstable; [ mcp-nixos playwright-mcp ]; 
   programs.opencode = {
     enable = true;
     package = pkgs-unstable.opencode;
@@ -49,6 +49,11 @@
           headers = {
             "x-api-key" = "{file:${osConfig.age.secrets."exa-api-key".path}}";
           };
+        };
+        playwright-port-9222 = {
+          enabled = true;
+          type = "local";
+          command = [ "${pkgs-unstable.playwright-mcp}/bin/playwright-mcp" "--cdp-endpoint" "http://127.0.0.1:9222" ];
         };
       };
     };
