@@ -14,6 +14,7 @@
     gimp
     lmstudio
     cherry-studio
+    whisper-cpp
     onlyoffice-desktopeditors
     bottles
     obsidian

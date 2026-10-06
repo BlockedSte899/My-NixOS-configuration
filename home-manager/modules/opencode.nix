@@ -17,17 +17,17 @@
           "MiniMaxAI/MiniMax-M2.7" = { 
             name = "MiniMax M2.7";
             limit.context = 180000;
-            limit.output = 16384; # IDK the actual limit
+            limit.output = 8192; # IDK the actual limit
           };
           "deepseek-ai/DeepSeek-V4-Flash-0731" = {
             name = "DeepSeek V4 Flash 0731";
             limit.context = 400000;
-            limit.output = 16384; # IDK the actual limit
+            limit.output = 8192; # IDK the actual limit
           };
           "zai-org/GLM-5.3-Flash" = {
             name = "GLM 5.3 Flash";
             limit.context = 400000;
-            limit.output = 16384; # IDK the actual limit
+            limit.output = 8192; # IDK the actual limit
           };
         };
       };
