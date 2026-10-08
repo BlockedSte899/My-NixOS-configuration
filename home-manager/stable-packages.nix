@@ -28,6 +28,7 @@
     telegram-desktop
     ayugram-desktop
     # qdirstat
+    gparted
   ];
 }
 

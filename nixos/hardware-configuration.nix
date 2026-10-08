@@ -48,12 +48,6 @@
     options = [ "defaults" ];
   };
 
-  fileSystems."/mnt/CachyOS" = {
-    device = "/dev/disk/by-uuid/c66e4c18-ad5f-420a-9398-b6b97537b2d2";
-    fsType = "ext4";
-    options = [ "defaults" ];
-  };
-
   swapDevices = [ { device = "/swapfile"; size = 16384; } ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
