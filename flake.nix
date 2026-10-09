@@ -43,7 +43,6 @@
 
     mc-server-manager = {
       url = "github:BlockedSte899/mc-server-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -73,6 +72,9 @@
     system = vars.system;
     config.allowUnfree = true;
     overlays = [ inputs.ytm-player.overlays.default ];
+    config.permittedInsecurePackages = [
+      "pnpm-10.34.0"
+    ];
   };  
 
   in
