@@ -13,7 +13,7 @@
 
     gimp
     lmstudio
-    cherry-studio
+    #cherry-studio
     whisper-cpp
     onlyoffice-desktopeditors
     bottles

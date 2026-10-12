@@ -44,6 +44,10 @@
     mc-server-manager = {
       url = "github:BlockedSte899/mc-server-manager";
     };
+
+    artcraft = {
+      url = "github:ipeglin/artcraft-nix";
+    };
   };
 
   outputs = { nixpkgs, nixpkgs-unstable, ... } @ inputs:
