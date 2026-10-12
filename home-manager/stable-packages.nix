@@ -14,6 +14,7 @@
     gimp
     lmstudio
     #cherry-studio
+    (callPackage ./modules/cherry-studio.nix {})
     whisper-cpp
     onlyoffice-desktopeditors
     bottles
@@ -23,6 +24,7 @@
     qbittorrent
     ferdium
     teams-for-linux
+    google-chrome
     kdePackages.okular
     kdePackages.kate
     telegram-desktop

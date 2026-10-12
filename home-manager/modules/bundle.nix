@@ -14,6 +14,5 @@
     ./prismlauncher.nix
     ./xmcl.nix
     ./opencode.nix
-    ./cherry-studio
   ];
 }
