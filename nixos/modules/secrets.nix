@@ -25,6 +25,11 @@
       owner = "nikita";
       mode = "0400";
     };
+    nvidia-api-key = {
+      file = "${vars.configPath}/secrets/nvidia-api-key.age";
+      owner = "nikita";
+      mode = "0400";
+    };
   };
 
   # Github authentication token

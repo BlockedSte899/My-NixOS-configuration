@@ -20,6 +20,5 @@
     ./fonts.nix
     ./printing.nix
     ./obs-studio.nix
-    ./artcraft.nix
   ];
 }

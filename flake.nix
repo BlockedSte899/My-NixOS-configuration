@@ -45,8 +45,9 @@
       url = "github:BlockedSte899/mc-server-manager";
     };
 
-    artcraft = {
-      url = "github:ipeglin/artcraft-nix";
+    nix-craftapps = {
+      url = "github:olafkfreund/nix-craftapps";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 

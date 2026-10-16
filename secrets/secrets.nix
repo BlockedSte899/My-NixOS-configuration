@@ -9,4 +9,5 @@ in
   "curseforge-api-key.age".publicKeys = [ system nikita ];
   "dahl-api-key.age".publicKeys = [ system nikita ];
   "exa-api-key.age".publicKeys = [ system nikita ];
+  "nvidia-api-key.age".publicKeys = [ system nikita ];
 }

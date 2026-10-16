@@ -20,24 +20,6 @@
         "type": "github"
       }
     },
-    "artcraft": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1791807135,
-        "narHash": "sha256-P8PUhouQTgxzaoBWkSjWz+mOwKUKFnDpkDrIx+Roj1I=",
-        "owner": "ipeglin",
-        "repo": "artcraft-nix",
-        "rev": "ae8625eb38e9fdcd9002899d134d4bd2e763e434",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ipeglin",
-        "repo": "artcraft-nix",
-        "type": "github"
-      }
-    },
     "base16": {
       "inputs": {
         "fromYaml": "fromYaml"
@@ -257,7 +239,7 @@
     "mc-server-manager": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
         "lastModified": 1791659397,
@@ -273,13 +255,33 @@
         "type": "github"
       }
     },
+    "nix-craftapps": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791540118,
+        "narHash": "sha256-GHAjutOIsjA7kzusttluaftJH0yBT53LMiFpm6Nvd8o=",
+        "owner": "olafkfreund",
+        "repo": "nix-craftapps",
+        "rev": "f93a6e61de21143bf54785adaefa5b4d9d1b3e1f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "olafkfreund",
+        "repo": "nix-craftapps",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1791594108,
-        "narHash": "sha256-XK4KceonkwD8LuMAt/vNrz982mXJM5jeHAxMwsUXXAQ=",
+        "lastModified": 1790185690,
+        "narHash": "sha256-xJ+X4hBtOcAFGBOe5nAMyMUeF9foJBmIOu3NjBqBycU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "6510408d147d8c5e6d76043e899e9251756f6a75",
+        "rev": "4975466d324710c576dc11ad614684e6bd8cad8e",
         "type": "github"
       },
       "original": {
@@ -306,22 +308,6 @@
       }
     },
     "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1790185690,
-        "narHash": "sha256-xJ+X4hBtOcAFGBOe5nAMyMUeF9foJBmIOu3NjBqBycU=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4975466d324710c576dc11ad614684e6bd8cad8e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
       "locked": {
         "lastModified": 1791765022,
         "narHash": "sha256-ZGq3ptZzA+oO0N/Wi/F+GbuTijLkYExD01LvpNFAvr0=",
@@ -385,10 +371,10 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
-        "artcraft": "artcraft",
         "home-manager": "home-manager",
         "mc-server-manager": "mc-server-manager",
-        "nixpkgs": "nixpkgs_3",
+        "nix-craftapps": "nix-craftapps",
+        "nixpkgs": "nixpkgs_2",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "noctalia": "noctalia",
         "stylix": "stylix",
