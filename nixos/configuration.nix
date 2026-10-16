@@ -14,7 +14,7 @@
 
   # Cachix binary cache 
   nix.settings = {
-    substituters = [
+    extra-substituters = [
       "https://noctalia.cachix.org"
       "https://mc-server-manager.cachix.org"
     ];
