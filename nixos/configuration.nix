@@ -13,11 +13,16 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Cachix binary cache 
-  nix.settings.substituters = [ "https://mc-server-manager.cachix.org" ];
-  nix.settings.extra-trusted-public-keys = [
-    "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
-    "mc-server-manager.cachix.org-1:Hsl2QiUTpR2soBiVT3OMX+whjLoGkMooh05O0dGMbiI="
-  ];
+  nix.settings = {
+    substituters = [
+      "https://noctalia.cachix.org"
+      "https://mc-server-manager.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+      "mc-server-manager.cachix.org-1:Hsl2QiUTpR2soBiVT3OMX+whjLoGkMooh05O0dGMbiI="
+    ];
+  };
 
   # Never change this value!
   system.stateVersion = "26.05";
