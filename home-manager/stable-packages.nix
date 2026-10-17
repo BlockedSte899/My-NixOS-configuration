@@ -31,6 +31,7 @@
     ayugram-desktop
     # qdirstat
     gparted
+    mindustry
   ];
 }
 

@@ -53,6 +53,9 @@
           };
         };
       };
+      plugin = [
+        "@dietrichgebert/ponytail"
+      ];
       mcp = {
         nixos = {
           enabled = true;
