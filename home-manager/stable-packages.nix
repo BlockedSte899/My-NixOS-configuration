@@ -3,7 +3,6 @@
 {
   home.packages = with pkgs; [
     ffmpeg
-    pkgs.thunar
     xarchiver
     unrar
     #lxqt.lxqt-policykit

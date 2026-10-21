@@ -1,7 +1,7 @@
 { pkgs-unstable, osConfig, ... }:
 
 {
-  home.packages = with pkgs-unstable; [ mcp-nixos playwright-mcp ]; 
+  home.packages = with pkgs-unstable; [ mcp-nixos playwright-mcp rust-analyzer slint-lsp ]; 
   programs.opencode = {
     enable = true;
     package = pkgs-unstable.opencode;
@@ -76,6 +76,12 @@
           enabled = true;
           type = "local";
           command = [ "${pkgs-unstable.playwright-mcp}/bin/playwright-mcp" "--cdp-endpoint" "http://127.0.0.1:9222" ];
+        };
+      };
+      lsp = {
+        slint = {
+          command = [ "slint-lsp" ];
+          extensions = [ ".slint" ];
         };
       };
     };
