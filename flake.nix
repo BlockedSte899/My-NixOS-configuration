@@ -97,15 +97,19 @@
 
         inputs.home-manager.nixosModules.default
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.${vars.username} = ./home-manager/home.nix;
-          home-manager.extraSpecialArgs = { inherit inputs; inherit vars; inherit pkgs-unstable; };
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "backup"; # required if opencode changes opencode.json
+            extraSpecialArgs = { inherit inputs; inherit vars; inherit pkgs-unstable; };
 
-          home-manager.sharedModules = [
-            # inputs.zen-browser.homeModules.default
-            inputs.stylix.homeModules.stylix
-          ];
+            users.${vars.username} = ./home-manager/home.nix;
+
+            sharedModules = [
+              # inputs.zen-browser.homeModules.default
+              inputs.stylix.homeModules.stylix
+            ];
+          };
         }
 
         inputs.agenix.nixosModules.default
