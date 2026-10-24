@@ -1,7 +1,18 @@
 { pkgs-unstable, osConfig, ... }:
 
 {
-  home.packages = with pkgs-unstable; [ mcp-nixos playwright-mcp rust-analyzer slint-lsp ]; 
+  home.packages = with pkgs-unstable; [ 
+    mcp-nixos 
+    playwright-mcp 
+    rust-analyzer 
+    slint-lsp
+
+    # required for rust + slint factory for gui check
+    grim
+    wtype
+    ydotool
+    jq
+  ]; 
   programs.opencode = {
     enable = true;
     package = pkgs-unstable.opencode;
