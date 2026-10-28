@@ -49,6 +49,9 @@
           options = {
             baseURL = "https://integrate.api.nvidia.com/v1";
             apiKey = "{file:${osConfig.age.secrets."nvidia-api-key".path}}";
+            timeout = false;
+            headerTimeout = 1500000;
+            chunkTimeout = 120000;
           };
           models = {
             "z-ai/glm-5.3" = {
@@ -84,9 +87,14 @@
           };
         };
         playwright-port-9222 = {
-          enabled = true;
+          enabled = false;
           type = "local";
           command = [ "${pkgs-unstable.playwright-mcp}/bin/playwright-mcp" "--cdp-endpoint" "http://127.0.0.1:9222" ];
+        };
+        slint-app = {
+          enabled = true;
+          type = "remote";
+          url = "http://127.0.0.1:9223/mcp";
         };
       };
       lsp = {
