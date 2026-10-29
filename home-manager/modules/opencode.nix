@@ -92,7 +92,7 @@
           command = [ "${pkgs-unstable.playwright-mcp}/bin/playwright-mcp" "--cdp-endpoint" "http://127.0.0.1:9222" ];
         };
         slint-app = {
-          enabled = true;
+          enabled = false;
           type = "remote";
           url = "http://127.0.0.1:9223/mcp";
         };
