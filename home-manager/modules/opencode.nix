@@ -17,6 +17,12 @@
     enable = true;
     package = pkgs-unstable.opencode;
     settings = {
+      plugin = [
+        #"github:vdistortion/opencode-openai-limits"
+        "opencode-antigravity-auth@2.1.2"
+        #"opencode-openai-limits"
+        "@slkiser/opencode-quota"
+      ];
       provider = { 
         dahl = {
           npm = "@ai-sdk/openai-compatible";
@@ -63,6 +69,11 @@
               name = "GLM 5.3 Flash";
               limit.context = 1000000;
               limit.output = 944000;
+            };
+            "stepfun-ai/step-5-preview" = {
+              name = "Step 5 Preview";
+              limit.context = 1000000;
+              limit.output = 64000;
             };
           };
         };

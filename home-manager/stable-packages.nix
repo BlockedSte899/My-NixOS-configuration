@@ -14,6 +14,7 @@
     lmstudio
     #cherry-studio
     (callPackage ./modules/cherry-studio.nix {})
+    codex
     whisper-cpp
     onlyoffice-desktopeditors
     bottles
