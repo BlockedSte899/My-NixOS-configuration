@@ -21,5 +21,6 @@
     ./printing.nix
     ./obs-studio.nix
     ./ydotool.nix
+    ./umbriel.nix
   ];
 }

@@ -1,13 +1,13 @@
 { pkgs, appimageTools, lib, fetchurl, ... }:
 
 let
-  version = "2.1.8";
+  version = "2.1.10";
   pname = "cherry-studio";
   name = "${pname}-${version}";
 
   src = fetchurl {
     url = "https://github.com/CherryHQ/cherry-studio/releases/download/v${version}/Cherry-Studio-${version}-linux-x64.AppImage";
-    hash = "sha256-fxkdc1QK9FYWYmb5GHuCXT0tDukURydfZx7LL4Vp4ZM=";
+    hash = "sha256-8pUxkbrU4ocEpqycgoEESS9NcARfejI5hCz/Cl1M+/w=";
   };
 
   appimageContents = appimageTools.extract { inherit pname version src; };

@@ -2,6 +2,7 @@
   imports = [
     ./noctalia/noctalia.nix
     ./niri/niri.nix
+    ./umbriel.nix
     ./Thunar/Thunar.nix
     ./zen-browser.nix
     ./fish.nix

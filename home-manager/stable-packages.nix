@@ -27,7 +27,7 @@
     google-chrome
     kdePackages.okular
     kdePackages.kate
-    telegram-desktop
+    #telegram-desktop
     ayugram-desktop
     # qdirstat
     gparted

@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs-unstable; [ 
+    opencode-desktop
     mcp-nixos 
     playwright-mcp 
     rust-analyzer 
@@ -12,7 +13,7 @@
     wtype
     ydotool
     jq
-  ]; 
+  ];
   programs.opencode = {
     enable = true;
     package = pkgs-unstable.opencode;
