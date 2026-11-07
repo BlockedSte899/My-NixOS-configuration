@@ -17,7 +17,7 @@ thickness = 25
 widget_spacing = 15
 
     [bar.default.dead_zone.actions]
-    left = "exec niri msg action toggle-overview"
+    left = "exec niri msg action toogle-overview; umbriel msg overview-toggle"
     middle = "none"
 
     [[bar.default.capsule_group]]
