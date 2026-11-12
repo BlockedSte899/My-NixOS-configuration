@@ -5,5 +5,7 @@
     firefox
     yt-dlp
     handy
+    herdr
+    herdr-desktop
   ];
 }
