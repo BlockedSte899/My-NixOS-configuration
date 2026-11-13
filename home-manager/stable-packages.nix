@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     ffmpeg
     xarchiver
+    fzf
     unrar
     #lxqt.lxqt-policykit
     mpv

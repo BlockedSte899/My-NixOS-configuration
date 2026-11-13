@@ -56,6 +56,7 @@
         # Applications and session
         "Mod+Escape" = "session-quit";
         "Mod+Space" = "spawn noctalia msg panel-toggle launcher";
+        "Mod+C" = "spawn noctalia msg panel-toggle clipboard";
         "Print" = "spawn noctalia msg screenshot-region";
         "Mod+O" = { action = "overview-toggle"; repeat = false; };
         "Mod+Q" = { action = "window-close"; repeat = false; };
