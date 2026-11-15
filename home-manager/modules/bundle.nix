@@ -16,5 +16,6 @@
     ./xmcl.nix
     ./opencode.nix
     ./artcraft.nix
+    #./herdr.nix
   ];
 }
