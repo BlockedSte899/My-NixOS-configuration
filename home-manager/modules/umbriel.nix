@@ -35,7 +35,7 @@
           options = "grp:caps_toggle";
         };
         focus = {
-          follows_mouse = true;
+          follows_mouse = "sloppy";
         };
         touchpad = {
           natural_scroll = true;
