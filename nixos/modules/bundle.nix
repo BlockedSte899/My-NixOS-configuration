@@ -22,5 +22,6 @@
     ./obs-studio.nix
     ./ydotool.nix
     ./umbriel.nix
+    ./swap.nix
   ];
 }

@@ -11,6 +11,9 @@
     mpc
     gowall
 
+    imagemagick
+    tesseract
+
     gimp
     lmstudio
     #cherry-studio
